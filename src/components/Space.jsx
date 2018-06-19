@@ -20,8 +20,11 @@ class Space extends Component {
           <Grid item lg = {3}>
             <Login/>
           </Grid>
-          <Grid item lg = {9}>
+          <Grid item lg = {8}>
               <ContentSpace/>
+          </Grid>
+          <Grid item lg = {1}>
+
           </Grid>
         </Grid>
       </Fragment>

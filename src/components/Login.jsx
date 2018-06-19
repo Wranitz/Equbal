@@ -42,7 +42,7 @@ class Login extends Component {
       <Fragment>
         <Paper elevation = {2} className = {classes.Lpapers}>
           <form>
-            <Grid container direction = "row"  spacing = {24} justify = 'center' alignItems = 'center' >
+            <Grid container direction = "column"  spacing = {16} justify = 'center' alignItems = 'center' >
               <Grid item lg = {12} >
                   <Typography variant = "headline" className = {classes.title}>
                     Login Here
@@ -55,6 +55,7 @@ class Login extends Component {
                     className={classes.fieldemail}
                     margin="normal"
                     />
+                  <br/>
                     <TextField
                     id="password-input"
                     label="Password"
@@ -70,7 +71,6 @@ class Login extends Component {
                   </Button>
                   <br/>
                   <Button
-                    href="#text-buttons"
                     onClick = {this.resetPassword}
                     className={classes.buttonReset}>
                     <Typography color = 'primary' className = {classes.resetText} variant = "caption" align = "right" >
