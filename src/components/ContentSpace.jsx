@@ -1,11 +1,29 @@
 import React , { Component , Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import SpaceBar from './SpaceBar';
 import {PostLabel} from './PostLabel';
 
+
 class ContentSpace extends Component {
+
+  constructor(props){
+    super(props);
+      this.state = {
+
+      }
+  }
+
+
   render(){
+
+    const contentItem=this.props.post.map((post) => {
+      return (
+        <PostLabel name={post.userName} post={post.post} />
+      );
+    });
+
+
+    console.log(this.props.post)
     return(
       <Fragment>
         <Grid container
@@ -13,7 +31,7 @@ class ContentSpace extends Component {
           alignItems = 'stretch'
           spacing = {0}
           style={{
-            minHeight : '500px',
+            minHeight : '580px',
             borderWidth: '9px',
             borderRadius: '7px',
             borderStyle :'solid',
@@ -38,22 +56,14 @@ class ContentSpace extends Component {
                   lineHeight: '28px',
                   paddingLeft: '18%',
                   paddingRight: '18%',
-                  height: '450px',
+                  height: '500px',
                   overflowY: 'scroll',
                   paddingBottom : '2%',
                   borderBottomStyle:'hidden',
                   borderBottomWidth:'4px'
                 }}>
-                  <PostLabel/>
-                  <PostLabel/>
-                  <PostLabel/>
-                  <PostLabel/>
-                  <PostLabel/>
-                  <PostLabel/>
-                  <PostLabel/>
-                  <PostLabel/>
+                {contentItem}
               </Grid>
-
         </Grid>
       </Fragment>
     )

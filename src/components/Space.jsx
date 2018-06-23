@@ -1,17 +1,29 @@
 import React , { Component , Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Login from './Login'
-import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
-import ContentSpace from './ContentSpace'
+import ContentSpace from './ContentSpace';
+import Paper from '@material-ui/core/Paper';
 
 const styles = () => ({
   paper: {
-    height: 480
+    height: 350
   }
 })
 
 class Space extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      login : 'false'
+    }
+  }
+
+  postCategory() {
+    return this.props.posts
+    }
+
   render() {
     const { classes } = this.props;
     return(
@@ -20,11 +32,13 @@ class Space extends Component {
           <Grid item lg = {3}>
             <Login/>
           </Grid>
-          <Grid item lg = {8}>
-              <ContentSpace/>
+          <Grid item lg = {6}>
+              <ContentSpace post = {this.postCategory()}/>
           </Grid>
-          <Grid item lg = {1}>
-
+          <Grid item lg = {3}>
+            <Paper>
+              <h3>Hello</h3>
+            </Paper>
           </Grid>
         </Grid>
       </Fragment>

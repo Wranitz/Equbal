@@ -4,9 +4,18 @@ import Grid from '@material-ui/core/Grid';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Space from '../../components/Space';
+import {posts} from '../../database/store'
 
 
 class IndexSpace extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      posts
+    }
+  }
+
   render(){
     return(
       <Fragment>
@@ -17,7 +26,7 @@ class IndexSpace extends Component {
             </Grid>
 
             <Grid item lg = {12}>
-              <Space/>
+              <Space posts = {this.state.posts}/>
             </Grid>
 
             <Grid item lg = {12}>

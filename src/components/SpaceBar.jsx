@@ -1,8 +1,6 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -47,13 +45,13 @@ function SpaceBar(props) {
                        label="Search"
                        type="search"
                        className = {classes.searchField}
-                       style = {{
-                         width: '86%'
-                       }}
                        />
                   <IconButton
                       className={classes.button}
                       aria-label="Search"
+                      style = {{
+                        float: 'right'
+                      }}
                       >
                     <i className="material-icons">search</i>
                   </IconButton>

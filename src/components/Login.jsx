@@ -8,14 +8,12 @@ import Button from '@material-ui/core/Button';
 
 const styles = () => ({
   Lpapers: {
-    height: 548,
     backgroundColor: "#2521a945",
-    marginRight: 10,
-    marginLeft: 10,
-    padding: 50,
-    paddingTop: 100
-
-
+    marginLeft: 20,
+    padding: 25,
+    paddingTop: 50,
+    paddingBottom: 50,
+    borderRadius: 35,
   },
 
   inputField : {
@@ -23,7 +21,14 @@ const styles = () => ({
   },
 
   buttons: {
-    textAlign : 'right'
+    textAlign : 'center'
+
+  },
+
+  loginButton:{
+    paddingLeft:15,
+    paddingRight : 15,
+    width : 180
   },
 
   title : {
@@ -31,6 +36,8 @@ const styles = () => ({
   }
 
 })
+
+
 
 
 class Login extends Component {
@@ -65,8 +72,9 @@ class Login extends Component {
                     margin="normal"
                     />
               </Grid>
+              <br/>
               <Grid item lg = {12} className = {classes.buttons}>
-                  <Button variant="raised" color="primary" className={classes.loginButton}>
+                  <Button variant="raised" onClick = {this.handelLogin} color="primary" className={classes.loginButton}>
                     Login
                   </Button>
                   <br/>

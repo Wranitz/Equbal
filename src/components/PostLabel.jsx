@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 
-export function PostLabel() {
+export function PostLabel(props) {
   return(
     <Fragment>
       <Paper style = {{
@@ -17,10 +17,10 @@ export function PostLabel() {
         <Grid container direction = 'column' justify = 'center' alignItems = 'stretch' >
           <Grid item>
             <Typography variant="subheading" color="inherit">
-              What is color of a black hole?
+              {props.post}
             </Typography>
             <Typography variant = 'caption' color = "textSecondary">
-              Nitesh-R
+              {props.name}
             </Typography>
           </Grid>
         </Grid>
