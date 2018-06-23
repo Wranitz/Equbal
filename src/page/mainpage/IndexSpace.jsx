@@ -20,7 +20,15 @@ class IndexSpace extends Component {
     return(
       <Fragment>
         <CssBaseline/>
-          <Grid container alignItems = 'center' justify = 'space-around' direction = 'row' spacing = {24} style={{ backgroundColor: 'rgba(58, 130, 212, 0.13)', height:'768px'}}>
+          <Grid
+            container
+            alignItems = 'center'
+            justify = 'space-around'
+            direction = 'row'
+            spacing = {24}
+            style={{
+              backgroundColor: 'rgba(58, 130, 212, 0.13)'
+            }}>
             <Grid item xs={12} lg ={12} >
               <Header/>
             </Grid>

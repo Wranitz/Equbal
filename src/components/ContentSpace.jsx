@@ -13,12 +13,13 @@ class ContentSpace extends Component {
       }
   }
 
-
   render(){
 
     const contentItem=this.props.post.map((post) => {
       return (
-        <PostLabel name={post.userName} post={post.post} />
+        <Grid item xs={12}>
+          <PostLabel key = {post.postId} name={post.userName} post={post.post} />
+        </Grid>
       );
     });
 
@@ -32,7 +33,8 @@ class ContentSpace extends Component {
           alignItems = 'stretch'
           spacing = {8}
           style={{
-            height: '580px',
+            height:'560px',
+            maxHeight: '800px',
             borderWidth: '9px',
             borderRadius: '7px',
             borderStyle :'solid',
@@ -46,6 +48,7 @@ class ContentSpace extends Component {
                 sm = {12}
                 style = {{
                   padding: '1%',
+                  paddingTop: '0'
                 }}
                 >
                   <SpaceBar/>
@@ -56,7 +59,9 @@ class ContentSpace extends Component {
                 overflowY:'auto',
                 height:'85%'
               }}>
+                <Grid container spacing ={24} alignItems = "stretch">
                     {contentItem}
+                </Grid>
               </Grid>
         </Grid>
       </Fragment>

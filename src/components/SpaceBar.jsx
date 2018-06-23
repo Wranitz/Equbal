@@ -25,14 +25,14 @@ function SpaceBar(props) {
       <AppBar position="static" color="default" >
          <Toolbar>
            <Grid container direction = 'row' spacing = {16} justify = 'space-between' alignItems = 'center'>
-              <Grid item lg = {1}>
+              <Grid item xs = {1} lg = {1}>
                 <IconButton aria-label="refresh">
                   <i className = {classes.contentRefresh} class="material-icons">
                     refresh
                   </i>
                 </IconButton>
               </Grid>
-              <Grid item lg = {10}>
+              <Grid item xs = {10} lg = {10}>
                 <div className={classes.searchBar}
                   style = {{alignContent: 'center',
                     paddingLeft:'10%',
@@ -42,7 +42,7 @@ function SpaceBar(props) {
                   }}
                   >
                   <Grid container spacing = {8} justify='space-between' direction = 'row' alignItems='center'>
-                    <Grid item sm ={10}>
+                    <Grid item xs ={11}>
                       <TextField
                            id="search"
                            label="Search"
@@ -51,7 +51,7 @@ function SpaceBar(props) {
                            style = {{width:'100%'}}
                            />
                     </Grid>
-                    <Grid item sm ={2}>
+                    <Grid item xs ={1}>
                       <IconButton
                           className={classes.button}
                           aria-label="Search"
@@ -66,7 +66,7 @@ function SpaceBar(props) {
                   </Grid>
                 </div>
               </Grid>
-              <Grid item lg = {1}>
+              <Grid item xs = {1} lg = {1}>
                 <IconButton
                     className = {classes.newPost}
                     aria-label="Add post"
