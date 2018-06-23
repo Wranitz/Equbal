@@ -19,6 +19,8 @@ export function PostLabel(props) {
             <Typography variant="subheading" color="inherit">
               {props.post}
             </Typography>
+          </Grid>
+          <Grid item>
             <Typography variant = 'caption' color = "textSecondary">
               {props.name}
             </Typography>

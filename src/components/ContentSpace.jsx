@@ -27,42 +27,36 @@ class ContentSpace extends Component {
     return(
       <Fragment>
         <Grid container
-          direction = 'column'
+          direction = 'row'
+          justify = 'center'
           alignItems = 'stretch'
-          spacing = {0}
+          spacing = {8}
           style={{
-            minHeight : '580px',
+            height: '580px',
             borderWidth: '9px',
             borderRadius: '7px',
             borderStyle :'solid',
-            borderColor : '#9a9a9a',
-            backgroundColor: 'rgba(58, 130, 212, 0.13)',
-
+            borderColor : '#f5f5f5',
+            borderTopStyle:'hidden',
+            borderBottomStyle:'hidden',
           }}>
 
 
               <Grid item
-                lg = {12}
+                sm = {12}
                 style = {{
                   padding: '1%',
-                  borderBottomStyle:'hidden',
-                  borderBottomWidth:'4px'
                 }}
                 >
                   <SpaceBar/>
               </Grid>
-              <Grid item lg ={12}
-                style = {{
-                  lineHeight: '28px',
-                  paddingLeft: '18%',
-                  paddingRight: '18%',
-                  height: '500px',
-                  overflowY: 'scroll',
-                  paddingBottom : '2%',
-                  borderBottomStyle:'hidden',
-                  borderBottomWidth:'4px'
-                }}>
-                {contentItem}
+              <Grid item sm ={12} style={{paddingTop:'2%',
+                paddingLeft:'16%',
+                paddingRight:'16%',
+                overflowY:'auto',
+                height:'85%'
+              }}>
+                    {contentItem}
               </Grid>
         </Grid>
       </Fragment>

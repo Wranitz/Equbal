@@ -20,16 +20,16 @@ class IndexSpace extends Component {
     return(
       <Fragment>
         <CssBaseline/>
-          <Grid container alignItems = 'stretch' direction = 'column' spacing = {8}  >
-            <Grid item lg ={12} >
+          <Grid container alignItems = 'center' justify = 'space-around' direction = 'row' spacing = {24} style={{ backgroundColor: 'rgba(58, 130, 212, 0.13)', height:'768px'}}>
+            <Grid item xs={12} lg ={12} >
               <Header/>
             </Grid>
 
-            <Grid item lg = {12}>
+            <Grid item xs={12} lg = {12}>
               <Space posts = {this.state.posts}/>
             </Grid>
 
-            <Grid item lg = {12}>
+            <Grid item xs={12} lg = {12}>
               <Footer/>
             </Grid>
           </Grid>

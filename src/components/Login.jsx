@@ -8,12 +8,12 @@ import Button from '@material-ui/core/Button';
 
 const styles = () => ({
   Lpapers: {
-    backgroundColor: "#2521a945",
+    backgroundColor: "#ffc947",
     marginLeft: 20,
     padding: 25,
     paddingTop: 50,
     paddingBottom: 50,
-    borderRadius: 35,
+    borderRadius: 14,
   },
 
   inputField : {

@@ -24,7 +24,7 @@ function SpaceBar(props) {
       }}>
       <AppBar position="static" color="default" >
          <Toolbar>
-           <Grid container direction = 'row' spacing = {40} justify = 'space-between' alignItems = 'center'>
+           <Grid container direction = 'row' spacing = {16} justify = 'space-between' alignItems = 'center'>
               <Grid item lg = {1}>
                 <IconButton aria-label="refresh">
                   <i className = {classes.contentRefresh} class="material-icons">
@@ -35,26 +35,35 @@ function SpaceBar(props) {
               <Grid item lg = {10}>
                 <div className={classes.searchBar}
                   style = {{alignContent: 'center',
-                    paddingLeft:'20%',
-                    paddingRight:'20%',
-                    width: '100%'
+                    paddingLeft:'10%',
+                    paddingRight:'10%',
+                    width: '100%',
+                    paddingBottom: '2%'
                   }}
                   >
-                  <TextField
-                       id="search"
-                       label="Search"
-                       type="search"
-                       className = {classes.searchField}
-                       />
-                  <IconButton
-                      className={classes.button}
-                      aria-label="Search"
-                      style = {{
-                        float: 'right'
-                      }}
-                      >
-                    <i className="material-icons">search</i>
-                  </IconButton>
+                  <Grid container spacing = {8} justify='space-between' direction = 'row' alignItems='center'>
+                    <Grid item sm ={10}>
+                      <TextField
+                           id="search"
+                           label="Search"
+                           type="search"
+                           className = {classes.searchField}
+                           style = {{width:'100%'}}
+                           />
+                    </Grid>
+                    <Grid item sm ={2}>
+                      <IconButton
+                          className={classes.button}
+                          aria-label="Search"
+                          style = {{
+                            paddingTop: '5%',
+                            float: 'right'
+                          }}
+                          >
+                        <i className="material-icons">search</i>
+                      </IconButton>
+                    </Grid>
+                  </Grid>
                 </div>
               </Grid>
               <Grid item lg = {1}>

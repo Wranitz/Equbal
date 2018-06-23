@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 
 const styles = () => ({
   paper: {
-    height: 350
+
   }
 })
 
@@ -28,14 +28,22 @@ class Space extends Component {
     const { classes } = this.props;
     return(
       <Fragment>
-        <Grid container direction = 'row' spacing = {40} alignItems = 'center' justify = 'space-around' >
-          <Grid item lg = {3}>
+        <Grid
+          container direction = 'row'
+          spacing = {32}
+          alignItems = 'center'
+          justify = 'space-around'
+          alignItems='center'
+
+           >
+          <Grid item xs = {12} sm={2} lg = {3}>
             <Login/>
           </Grid>
-          <Grid item lg = {6}>
-              <ContentSpace post = {this.postCategory()}/>
+          <Grid item xs={12} sm ={10} lg = {7} >
+              <ContentSpace
+                post = {this.postCategory()}/>
           </Grid>
-          <Grid item lg = {3}>
+          <Grid item xs ={12} sm={2} lg = {2}>
             <Paper>
               <h3>Hello</h3>
             </Paper>

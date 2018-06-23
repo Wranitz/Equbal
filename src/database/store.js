@@ -9,9 +9,7 @@ export const user = [
 ]
 
 export const category = [
-  'Health' , 'Lifestyle' ,
-  'Entertainment' , 'Science and Technology' ,
-  'Conciousness' , 'News/Event' , 'Travels & Adventure' , 'Living Beings'
+
 ]
 
 export const posts = [
