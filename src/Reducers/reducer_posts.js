@@ -1,18 +1,5 @@
-export const user = [
-
-    'userid' : '1',
-    'username' : 'Nitesh',
-    'userpassword' : '12345',
-    'useremail' : 'niteshpaudel96@gmail.com',
-    'category' : ['Science and Technology' , 'Conciousness' , 'Lifestyle' , 'News/Event'],
-
-]
-
-export const category = [
-
-]
-
-export const posts = [
+export default function() {
+  return[
   {
     postId : '1',
     userName : 'Nitesh',
@@ -78,5 +65,12 @@ export const posts = [
     userName: 'Ujjwol',
     post: 'What is collective unconcious?',
     category: 'Conciousness',
+  },
+  {
+    postId: '12',
+    userName: 'Galytica',
+    post: 'How does a star forms?',
+    category: 'Science',
   }
 ]
+}

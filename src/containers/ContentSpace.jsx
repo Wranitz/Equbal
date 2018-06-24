@@ -1,30 +1,23 @@
 import React , { Component , Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
-import SpaceBar from './SpaceBar';
-import {PostLabel} from './PostLabel';
-
+import SpaceBar from '../components/SpaceBar';
+import {PostLabel} from '../components/PostLabel';
+import  { connect } from 'react-redux';
 
 class ContentSpace extends Component {
 
-  constructor(props){
-    super(props);
-      this.state = {
-
-      }
+  contentItem() {
+    return this.props.posts.map((post) => {
+      return (
+        <Grid key = {post.postId} item xs={12}>
+          <PostLabel name={post.userName} post={post.post} />
+        </Grid>
+      );
+    });
   }
 
   render(){
 
-    const contentItem=this.props.post.map((post) => {
-      return (
-        <Grid item xs={12}>
-          <PostLabel key = {post.postId} name={post.userName} post={post.post} />
-        </Grid>
-      );
-    });
-
-
-    console.log(this.props.post)
     return(
       <Fragment>
         <Grid container
@@ -33,12 +26,10 @@ class ContentSpace extends Component {
           alignItems = 'stretch'
           spacing = {8}
           style={{
-            height:'560px',
-            maxHeight: '800px',
             borderWidth: '9px',
             borderRadius: '7px',
             borderStyle :'solid',
-            borderColor : '#f5f5f5',
+            borderColor : '#fafafa',
             borderTopStyle:'hidden',
             borderBottomStyle:'hidden',
           }}>
@@ -48,19 +39,21 @@ class ContentSpace extends Component {
                 sm = {12}
                 style = {{
                   padding: '1%',
-                  paddingTop: '0'
+                  paddingLeft: '5%',
+                  paddingRight: '5%'
                 }}
                 >
                   <SpaceBar/>
               </Grid>
-              <Grid item sm ={12} style={{paddingTop:'2%',
+              <Grid item sm ={12} style={{
+                paddingTop:'2%',
                 paddingLeft:'16%',
                 paddingRight:'16%',
-                overflowY:'auto',
-                height:'85%'
+                height:'85%',
+                overflowY:'auto'
               }}>
-                <Grid container spacing ={24} alignItems = "stretch">
-                    {contentItem}
+                <Grid container spacing ={24} alignItems = "stretch" style = {{height:'500px'}}>
+                    {this.contentItem()}
                 </Grid>
               </Grid>
         </Grid>
@@ -69,4 +62,10 @@ class ContentSpace extends Component {
   }
 }
 
-export default ContentSpace;
+function mapStateToProps(state) {
+  return{
+    posts: state.posts
+  };
+}
+
+export default connect(mapStateToProps)(ContentSpace);

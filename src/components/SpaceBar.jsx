@@ -20,9 +20,9 @@ function SpaceBar(props) {
   const { classes } = props;
   return(
     <div className = {classes.contentBar} style = {{
-        minWidth: '100%'
+        minWidth: '100%',
       }}>
-      <AppBar position="static" color="default" >
+      <AppBar position="static" style={{backgroundColor:'rgba(52, 26, 193, 0.40)'}} >
          <Toolbar>
            <Grid container direction = 'row' spacing = {16} justify = 'space-between' alignItems = 'center'>
               <Grid item xs = {1} lg = {1}>
@@ -38,7 +38,7 @@ function SpaceBar(props) {
                     paddingLeft:'10%',
                     paddingRight:'10%',
                     width: '100%',
-                    paddingBottom: '2%'
+                    paddingBottom: '1%'
                   }}
                   >
                   <Grid container spacing = {8} justify='space-between' direction = 'row' alignItems='center'>
@@ -72,7 +72,7 @@ function SpaceBar(props) {
                     aria-label="Add post"
                     style = {{float: 'right'}}
                     >
-                  <i class="material-icons">
+                  <i className="material-icons">
                     add_box
                   </i>
                 </IconButton>
