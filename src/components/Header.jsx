@@ -59,7 +59,7 @@ class Header extends Component  {
     const { classes } = this.props;
 
     return(
-        <AppBar color = 'primary' className = { classes.header } position="static">
+        <AppBar style = {{ backgroundColor: '#185e7f'}} className = { classes.header } position="static">
           <Toolbar>
             <Grid container direction = 'row'
               alignItems = 'center'

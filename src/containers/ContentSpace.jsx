@@ -33,6 +33,7 @@ class ContentSpace extends Component {
             borderTopStyle:'hidden',
             borderBottomStyle:'hidden',
           }}>
+          
 
 
               <Grid item
@@ -52,7 +53,7 @@ class ContentSpace extends Component {
                 height:'85%',
                 overflowY:'auto'
               }}>
-                <Grid container spacing ={24} alignItems = "stretch" style = {{height:'500px'}}>
+                <Grid container spacing ={24} alignItems = "stretch" style = {{height:'700px'}}>
                     {this.contentItem()}
                 </Grid>
               </Grid>

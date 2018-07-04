@@ -10,7 +10,14 @@ class Index extends Component {
     return(
       <Fragment>
         <CssBaseline/>
-          <Grid container alignItems = 'stretch' direction = 'column' spacing = {24} >
+          <Grid container 
+            alignItems = 'stretch' 
+            direction = 'column' 
+            spacing = {24} 
+            style={{
+              backgroundColor: 'rgba(58, 130, 212, 0.13)',
+            }}
+            >
             <Grid item lg ={12} >
               <Header/>
             </Grid>

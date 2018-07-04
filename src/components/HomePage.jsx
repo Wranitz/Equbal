@@ -17,18 +17,17 @@ const styles = () => ({
 
   buttonSignup: {
     padding:40,
+    paddingTop:10,
     align : 'center',
     backgroundColor : "#7ecb20"
   },
-
 
   semiIntro : {
     color : '#212121'
   },
 
   grid : {
-    height : 580,
-    backgroundColor : '#ffdd4b',
+    height : 700,
   },
 
 
@@ -65,10 +64,13 @@ class HomePage extends Component {
                   justify = 'space-around'
                   alignItems = 'center'
                   alignContent = 'center'
-                  direction = 'column'
+                  direction = 'row'
                   spacing={32}
                   >
-                    <Grid item lg = {6} >
+                    <Grid item lg = {7} >
+                        <div>
+                          <img src='/components/giphy.gif' style={{width:'300px',height:'300px'}} alt='loading' />
+                        </div>
                         <Typography color = 'primary'
                           className = {classes.Introtext}
                           variant = "headline"
@@ -77,7 +79,7 @@ class HomePage extends Component {
                         </Typography>
                     </Grid>
 
-                    <Grid item lg = {4}>
+                    <Grid item lg = {3}>
                       <Login/>
                     </Grid>
 
@@ -85,6 +87,7 @@ class HomePage extends Component {
                       <Grid container
                         direction = 'column'
                         justify = 'space-between'
+                        alignItems = 'flex-start'
                         className = {classes.semiText}
                         >
 

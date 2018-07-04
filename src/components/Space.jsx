@@ -1,6 +1,6 @@
 import React , { Component , Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Login from './Login'
+import ProfileDash from '../containers/profileDash';
 import { withStyles } from '@material-ui/core/styles';
 import ContentSpace from '../containers/ContentSpace';
 import Paper from '@material-ui/core/Paper';
@@ -28,15 +28,14 @@ class Space extends Component {
         <Grid
           container direction = 'row'
           spacing = {32}
-          alignItems = 'center'
           justify = 'space-around'
           alignItems='stretch'
           >
           <Grid item xs = {12} sm={2} lg = {3}>
-            <Login/>
+            <ProfileDash/>
           </Grid>
           <Grid item xs={12} sm ={10} lg = {7} >
-              <ContentSpace/>
+              <ContentSpace />
           </Grid>
           <Grid item xs ={12} sm={2} lg = {2}>
             <Paper>

@@ -5,6 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
+import PostForm from './postForm';
 
 const styles = {
   contentBar: {
@@ -17,17 +18,18 @@ const styles = {
 
 
 function SpaceBar(props) {
+  
   const { classes } = props;
   return(
     <div className = {classes.contentBar} style = {{
         minWidth: '100%',
       }}>
-      <AppBar position="static" style={{backgroundColor:'rgba(52, 26, 193, 0.40)'}} >
+      <AppBar position="static" style={{backgroundColor:'#5dadc8'}} >
          <Toolbar>
            <Grid container direction = 'row' spacing = {16} justify = 'space-between' alignItems = 'center'>
               <Grid item xs = {1} lg = {1}>
                 <IconButton aria-label="refresh">
-                  <i className = {classes.contentRefresh} class="material-icons">
+                  <i className = {classes.contentRefresh} className="material-icons">
                     refresh
                   </i>
                 </IconButton>
@@ -35,8 +37,8 @@ function SpaceBar(props) {
               <Grid item xs = {10} lg = {10}>
                 <div className={classes.searchBar}
                   style = {{alignContent: 'center',
-                    paddingLeft:'10%',
-                    paddingRight:'10%',
+                    paddingLeft:'8%',
+                    paddingRight:'8%',
                     width: '100%',
                     paddingBottom: '1%'
                   }}
@@ -76,6 +78,7 @@ function SpaceBar(props) {
                     add_box
                   </i>
                 </IconButton>
+                {/* <PostForm /> */}
               </Grid>
             </Grid>
           </Toolbar>

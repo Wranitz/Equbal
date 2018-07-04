@@ -10,8 +10,12 @@ import rootReducer from './Reducers/PostReducer';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
+const store = (window.devToolsExtension
+  ? window.devToolsExtension()(createStoreWithMiddleware)
+  : createStoreWithMiddleware);
+
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(rootReducer)}>
+  <Provider store={store(rootReducer)}>
     <App />
   </Provider>,
   document.getElementById('root')

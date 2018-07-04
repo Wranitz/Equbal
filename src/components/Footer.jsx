@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 
 const styles = () => ({
     footer: {
-      padding: 15,
+      padding: 11,
     },
 
 });
@@ -18,7 +18,7 @@ class Footer extends Component {
     const {classes} = this.props;
     return(
       <Fragment>
-        <AppBar color = 'primary' position="static" className = {classes.footer}>
+        <AppBar style = {{ backgroundColor: '#185e7f'}} position="static" className = {classes.footer}>
           <Grid container alignItems = "center" direction = 'row'>
             <Grid item lg = {7}>
               <i className = "material-icons">
