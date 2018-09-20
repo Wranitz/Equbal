@@ -1,19 +1,17 @@
+/* 
+    ./client/index.js
+*/
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import registerServiceWorker from './registerServiceWorker';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import App from './App/App.jsx';
+import axios from 'axios';
 
-import App from './App';
-import rootReducer from './Reducers/PostReducer';
-
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+axios.defaults.baseURL = 'http://localhost:8000/';
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(rootReducer)}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);
-registerServiceWorker();
+    <Provider store={store}>
+        <App />
+        
+    </Provider>
+
+    , document.getElementById('root'));
